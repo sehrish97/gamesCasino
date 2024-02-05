@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../../../../assets/logo.png";
 
 // material-ui
 import { Box, Stack, Typography, useTheme } from "@mui/material";

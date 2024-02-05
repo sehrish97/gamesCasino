@@ -11,7 +11,7 @@ import CustomShadows from "./shadows";
 
 const ThemeCustomization = ({ children }) => {
   const theme = Palette("light", "default");
-  const themeTypography = Typography(`'Poppins', sans-serif,'Train One', cursive,'Public Sans','sans-serif'`);
+  const themeTypography = Typography(`'Inter', sans-serif,'Train One', cursive,'Public Sans','sans-serif'`);
   const themeCustomShadows = useMemo(() => CustomShadows(theme), [theme]);
 
   const themeOptions = useMemo(
