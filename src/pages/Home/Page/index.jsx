@@ -41,7 +41,6 @@ const Page = () => {
     {
       title: "Browser",
       height: 300,
-      width: 200,
       data: [
         { label: `Page "Demonstration"`, value: 45 },
         { label: `Page "Demonstration"`, value: 24 },
@@ -57,7 +56,6 @@ const Page = () => {
     {
       title: "Operating System",
       height: 300,
-      width: 200,
       data: [
         { label: `Page "Demonstration"`, value: 45 },
         { label: `Page "Demonstration"`, value: 24 },
@@ -73,7 +71,6 @@ const Page = () => {
     {
       title: "Region",
       height: 300,
-      width: 200,
       data: [
         { label: `Page "Demonstration"`, value: 45 },
         { label: `Page "Demonstration"`, value: 24 },
@@ -89,7 +86,6 @@ const Page = () => {
     {
       title: "Country",
       height: 300,
-      width: 200,
       data: [
         { label: `Page "Demonstration"`, value: 45 },
         { label: `Page "Demonstration"`, value: 24 },
@@ -105,7 +101,6 @@ const Page = () => {
     {
       title: "City",
       height: 300,
-      width: 200,
       data: [
         { label: `Page "Demonstration"`, value: 45 },
         { label: `Page "Demonstration"`, value: 24 },
@@ -166,7 +161,7 @@ const Page = () => {
                       series={[
                         {
                           data: data.data,
-                          cx: 165,
+                          cx: 150,
                           innerRadius: 83,
                           outerRadius: 120,
                         },
@@ -191,7 +186,7 @@ const Page = () => {
               <Box
                 sx={{
                   bgcolor: "#1C1B20",
-                  padding: "35px 40px",
+                  padding: "30px 40px",
                   borderRadius: "10px",
                 }}
               >
@@ -227,7 +222,7 @@ const Page = () => {
                       series={[
                         {
                           data: data.data,
-                          cx: 165,
+                          cx: 150,
                           innerRadius: 83,
                           outerRadius: 120,
                         },
