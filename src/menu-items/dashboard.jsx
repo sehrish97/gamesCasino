@@ -1,119 +1,135 @@
 // assets
-import { DashboardOutlined } from '@ant-design/icons';
+import NoteAltIcon from "@mui/icons-material/NoteAlt";
+import HubIcon from "@mui/icons-material/Hub";
+import SelfImprovementIcon from "@mui/icons-material/SelfImprovement";
 
 // icons
 const icons = {
-  DashboardOutlined
+  NoteAltIcon,
+  HubIcon,
+  SelfImprovementIcon,
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
 
 const dashboard = {
-  id: 'group-dashboard',
-  title: 'Navigation',
-  type: 'group',
+  id: "group-dashboard",
+  title: "Dashboard",
+  groupTitleVisible: false,
+  groupDivider: false,
+  type: "group",
   children: [
     {
-      id: 'dashboard',
-      title: 'Dashboard',
-      type: 'item',
-      url: '/dash/setting',
-      icon: icons.DashboardOutlined,
-      breadcrumbs: false
-    }
-    ,
-    {
-      id: 'notifications',
-      title: 'Notifications',
-      type: 'item',
-      url: '/dashboard/default',
-      icon: icons.DashboardOutlined,
-      breadcrumbs: false
-    }
-    ,
-    {
-      id: 'users',
-      title: 'Users',
-      type: 'item',
-      url: '/dashboard/default',
-      icon: icons.DashboardOutlined,
-      breadcrumbs: false
+      id: "dashboard",
+      title: "Dashboard",
+      type: "item",
+      url: "/admin",
+      icon: icons.SelfImprovementIcon,
+      breadcrumbs: false,
     },
     {
-      id: 'analytics',
-      title: 'Analytics',
-      type: 'item',
-      url: '/dashboard/default',
-      icon: icons.DashboardOutlined,
-      breadcrumbs: false
+      id: "notifications",
+      title: "Notifications",
+      type: "item",
+      url: "/admin/notifications  ",
+      icon: icons.SelfImprovementIcon,
+      breadcrumbs: false,
     },
     {
-      id: 'activity',
-      title: 'Activity',
-      type: 'item',
-      url: '/dashboard/default',
-      icon: icons.DashboardOutlined,
-      breadcrumbs: false
+      id: "Users",
+      title: "Users",
+      type: "item",
+      url: "/admin/users",
+      icon: icons.SelfImprovementIcon,
+      breadcrumbs: false,
     },
     {
-      id: 'promocodes',
-      title: 'Promocodes',
-      type: 'collapse',
-      icon: icons.DashboardOutlined,
+      id: "analytics",
+      title: "Analytics",
+      type: "item",
+      url: "/admin/games/stats",
+      icon: icons.SelfImprovementIcon,
+      breadcrumbs: false,
+    },
+    {
+      id: "activity",
+      title: "Activity",
+      type: "item",
+      url: "/admin/activity",
+      icon: icons.SelfImprovementIcon,
+      breadcrumbs: false,
+    },
+    {
+      id: "promocodes",
+      title: "Promocodes",
+      type: "collapse",
+      icon: icons.SelfImprovementIcon,
+      breadcrumbs: false,
       children: [
         {
-          id: 'deposite',
-          title: 'Deposit',
-          type: 'item',
-          url: '/',
+          id: "deposits",
+          title: "Deposits",
+          type: "item",
+          url: "/admin/promocodes",
+          icon: icons.SelfImprovementIcon,
         },
         {
-          id: 'bonus',
-          title: 'Client Funnel',
-          type: 'item',
-          url: '/pages/register/register3',
-          // target: true    when uncomment this it will always open in new tab
-        }
-      ]
+          id: "bonus",
+          title: "Bonus",
+          type: "item",
+          url: "/admin/promocodes/bonus  ",
+          icon: icons.SelfImprovementIcon,
+        },
+      ],
     },
     {
-      id: 'sportsbook',
-      title: 'Sportsbook',
-      type: 'collapse',
-      icon: icons.DashboardOutlined,
+      id: "sportsbook",
+      title: "Sportsbook",
+      type: "collapse",
+      icon: icons.SelfImprovementIcon,
+      breadcrumbs: false,
       children: [
         {
-          id: 'single slip',
-          title: 'Single Slip',
-          type: 'item',
-          url: '/',
+          id: "single-slips",
+          title: "Single Slips",
+          type: "item",
+          url: "/admin/sport/singleSlips",
+          icon: icons.SelfImprovementIcon,
         },
         {
-          id: 'multislip',
-          title: 'Multi Slips',
-          type: 'item',
-          url: '/pages/register/register3',
-          // target: true    when uncomment this it will always open in new tab
-        }
-      ]
+          id: "multi-slips",
+          title: "Multi Slips",
+          type: "item",
+          url: "/admin/sports/multiSlips",
+          icon: icons.SelfImprovementIcon,
+        },
+        {
+          id: "featured",
+          title: "Featured",
+          type: "item",
+          url: "/admin/sports/featured",
+          icon: icons.SelfImprovementIcon,
+        },
+      ],
     },
     {
-      id: 'telegram',
-      title: 'Telegram',
-      type: 'collapse',
-      icon: icons.DashboardOutlined,
+      id: "telegram",
+      title: "Telegram",
+      type: "collapse",
+      icon: icons.SelfImprovementIcon,
+      breadcrumbs: false,
       children: [
         {
-          id: 'templates',
-          title: 'Templates',
-          type: 'item',
-          url: '/',
+          id: "templates",
+          title: "Templates",
+          type: "item",
+          url: "admin/sport/database/telegram_templates",
+          icon: icons.SelfImprovementIcon,
         },
-      ]
+      ],
     },
-
-  ]
-
+   
+  ],
 };
 
 export default dashboard;

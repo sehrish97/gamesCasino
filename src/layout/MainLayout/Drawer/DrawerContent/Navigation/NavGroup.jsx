@@ -1,25 +1,24 @@
-import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
 
 // material-ui
-import { Box, Divider, List, Typography } from '@mui/material';
+import { Box, Divider, List, Typography } from "@mui/material";
 
 // project import
-import NavItem from './NavItem';
-import NavCollapse from './NavCollapse';
+import NavItem from "./NavItem";
+import NavCollapse from "./NavCollapse";
 
 // ==============================|| NAVIGATION - LIST GROUP ||============================== //
 
 const NavGroup = ({ item }) => {
-
   const menu = useSelector((state) => state.menu);
   const { drawerOpen } = menu;
 
   const navCollapse = item.children?.map((menuItem) => {
     switch (menuItem.type) {
-      case 'collapse':
+      case "collapse":
         return <NavCollapse key={menuItem.id} menu={menuItem} level={1} />;
-      case 'item':
+      case "item":
         return <NavItem key={menuItem.id} item={menuItem} level={1} />;
       default:
         return (
@@ -32,12 +31,11 @@ const NavGroup = ({ item }) => {
 
   return (
     <>
-
       <List
         subheader={
           item.title &&
-          drawerOpen && (
-            <Box sx={{ pl: 3, mb: 1.5 }}>
+          item.groupTitleVisible === true && (
+            <Box sx={{ display: "flex", justifyContent: "space-around", mb: 1.5 }}>
               <Typography variant="subtitle2" color="textSecondary">
                 {item.title}
               </Typography>
@@ -49,13 +47,13 @@ const NavGroup = ({ item }) => {
       >
         {navCollapse}
       </List>
-      <Divider />
+      {item.groupDivider === true && <Divider />}
     </>
   );
 };
 
 NavGroup.propTypes = {
-  item: PropTypes.object
+  item: PropTypes.object,
 };
 
 export default NavGroup;

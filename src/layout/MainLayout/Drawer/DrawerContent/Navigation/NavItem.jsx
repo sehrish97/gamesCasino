@@ -7,7 +7,7 @@ import { useTheme } from '@mui/material/styles';
 import { Avatar, Chip, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material';
 
 // project import
-import { activeItem } from '../../../../../redux/slices/menu/menuSlice';
+import { activeItem } from '../../../../../redux/slices/menu/menuSlice'; 
 
 // ==============================|| NAVIGATION - LIST ITEM ||============================== //
 
@@ -33,7 +33,7 @@ const NavItem = ({ item, level }) => {
   };
 
   const Icon = item.icon;
-  const itemIcon = item.icon ? <Icon style={{ fontSize: drawerOpen ? '1rem' : '1.25rem' }} /> : false;
+  const itemIcon = item.icon ? <Icon style={{ fontSize: '1.4rem' }} /> : false;
 
   const isSelected = openItem.findIndex((id) => id === item.id) > -1;
   // active menu item on page load
@@ -44,7 +44,7 @@ const NavItem = ({ item, level }) => {
     // eslint-disable-next-line
   }, [pathname]);
 
-  const textColor = 'text.secondary';
+  const textColor = 'text.primary';
   const iconSelectedColor = 'primary.main';
 
   return (
@@ -55,19 +55,20 @@ const NavItem = ({ item, level }) => {
       selected={isSelected}
       sx={{
         zIndex: 1201,
-        my: 1,
-        pl: drawerOpen ? `${level * 28}px` : 1.5,
-        py: !drawerOpen && level === 1 ? 1.25 : 1,
+        my:1,
+        pl: drawerOpen ? `${level * 28}px` : 0.75,
+        // py: !drawerOpen && level === 1 ? 1.25 : 1,
+        
         ...(drawerOpen && {
           '&:hover': {
+            borderRadius:'0.75rem',
             bgcolor: 'primary.lighter'
           },
           '&.Mui-selected': {
-            borderRadius: '0.75rem',
-            // bgcolor: 'primary.lighter',
-            // border: `2px solid ${theme.palette.primary.main}`,
+            borderRadius:'0.75rem',
             color: iconSelectedColor,
             '&:hover': {
+              borderRadius:'0.75rem',
               color: iconSelectedColor,
               bgcolor: 'primary.lighter'
             }
@@ -75,22 +76,29 @@ const NavItem = ({ item, level }) => {
         }),
         ...(!drawerOpen && {
           '&:hover': {
-            bgcolor: 'transparent'
+            borderRadius:'0.75rem',
+            bgcolor: 'primary.lighter'
           },
           '&.Mui-selected': {
             '&:hover': {
-              bgcolor: 'transparent'
+              borderRadius:'0.75rem',
+              color: iconSelectedColor,
+              bgcolor: 'primary.lighter'
             },
-            bgcolor: 'transparent'
+            borderRadius:'0.75rem',
+            color: iconSelectedColor,
+            bgcolor: 'primary.lighter'
           }
         })
       }}
     >
+
       {itemIcon && (
         <ListItemIcon
           sx={{
             minWidth: 28,
             color: isSelected ? iconSelectedColor : textColor,
+            
             ...(!drawerOpen && {
               borderRadius: 1.5,
               width: 36,
@@ -103,11 +111,11 @@ const NavItem = ({ item, level }) => {
             }),
             ...(!drawerOpen &&
               isSelected && {
-              bgcolor: 'primary.lighter',
-              '&:hover': {
-                bgcolor: 'primary.lighter'
-              }
-            })
+                bgcolor: 'primary.lighter',
+                '&:hover': {
+                  bgcolor: 'primary.lighter'
+                }
+              })
           }}
         >
           {itemIcon}
@@ -123,7 +131,7 @@ const NavItem = ({ item, level }) => {
           }
         />
       )}
-
+      
       {(drawerOpen || (!drawerOpen && level !== 1)) && item.chip && (
         <Chip
           color={item.chip.color}
@@ -133,7 +141,7 @@ const NavItem = ({ item, level }) => {
           avatar={item.chip.avatar && <Avatar>{item.chip.avatar}</Avatar>}
         />
       )}
-
+      
     </ListItemButton>
   );
 };

@@ -26,9 +26,9 @@ const NavCollapse = ({ menu, level }) => {
   const handleClick = () => {
     setOpen(!open);
     setSelected(!selected ? menu.id : null);
-    if (menu?.id !== 'authentication') {
-      navigate(menu.children[0]?.url);
-    }
+    // if (menu?.id !== 'authentication') {
+    //   navigate(menu.children[0]?.url);
+    // }
   };
 
   const { pathname } = useLocation();
@@ -106,7 +106,7 @@ const NavCollapse = ({ menu, level }) => {
         <ListItemIcon sx={{ my: 'auto', minWidth: !menu.icon ? 18 : 36 }}>{menuIcon}</ListItemIcon>
         <ListItemText
           primary={
-            <Typography variant={selected === menu.id ? 'h5' : 'body1'} color="inherit" sx={{ my: 'auto' }}>
+            <Typography variant={selected === menu.id ? 'body1' : 'body1'} color="inherit" sx={{ my: 'auto' }}>
               {menu.title}
             </Typography>
           }
@@ -128,19 +128,19 @@ const NavCollapse = ({ menu, level }) => {
         <List
           component="div"
           disablePadding
-          sx={{
-            position: 'relative',
-            '&:after': {
-              content: "''",
-              position: 'absolute',
-              left: '32px',
-              top: 0,
-              height: '100%',
-              width: '1px',
-              opacity: 1,
-              background: theme.palette.primary.light
-            }
-          }}
+          // sx={{
+          //   position: 'relative',
+          //   '&:after': {
+          //     content: "''",
+          //     position: 'absolute',
+          //     left: '2px',
+          //     top: 0,
+          //     height: '100%',
+          //     width: '1px',
+          //     opacity: 1,
+          //     background: theme.palette.primary.light
+          //   }
+          // }}
         >
           {menus}
         </List>

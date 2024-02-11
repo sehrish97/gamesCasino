@@ -11,7 +11,7 @@ const DrawerHeader = ({ open }) => {
     <DrawerHeaderStyled theme={theme} open={open}>
       <Stack direction="row" spacing={1} alignItems="center">
         <Box sx={{ display: "flex", alignItems: "center", alignContent: "center", p: 4, }}>
-          <Typography variant="h3">phoenix</Typography>
+          <Typography variant="h3">Logo</Typography>
         </Box>
       </Stack>
     </DrawerHeaderStyled>
