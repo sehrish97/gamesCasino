@@ -1,82 +1,123 @@
-import { Box,Table , TableBody,TableCell,TableHead,TableRow} from '@mui/material'
-import { Link } from 'react-router-dom'
-import Title from './Title'
+import {
+  Box,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  Button,
+  Typography,
+  TableFooter,
+} from "@mui/material";
+import Title from "./Title";
+import CloseIcon from "@mui/icons-material/Close";
+import AddIcon from "@mui/icons-material/Add";
+import CreateModal from "./CreateModal";
+import { useState } from "react";
+
+const rows = [
+  {
+    code: "TEST1",
+    amount: "0.00100000 USDT",
+    usage: "56/100",
+    expiration: "2/13/2025, 3:00:28 PM",
+    created: "2/13/2024, 3:00:28 PM",
+  },
+];
 
 const Deposits = () => {
-    function createData(ID, Date, Users, Amount, Status, Manage) {
-        return { ID, Date, Users, Amount, Status, Manage };
-      }
-      
-      const rows = [
-        createData(
-          0,
-          '16 Mar, 2019',
-          'Elvis Presley',
-          'Tupelo, MS',
-          'VISA ⠀•••• 3719',
-          312.44,
-        ),
-        createData(
-          1,
-          '16 Mar, 2019',
-          'Paul McCartney',
-          'London, UK',
-          'VISA ⠀•••• 2574',
-          866.99,
-        ),
-        createData(2, '16 Mar, 2019', 'Tom Scholz', 'Boston, MA', 'MC ⠀•••• 1253', 100.81),
-        createData(
-          3,
-          '16 Mar, 2019',
-          'Michael Jackson',
-          'Gary, IN',
-          'AMEX ⠀•••• 2000',
-          654.39,
-        ),
-        createData(
-          4,
-          '15 Mar, 2019',
-          'Bruce Springsteen',
-          'Long Branch, NJ',
-          'VISA ⠀•••• 5919',
-          212.79,
-        ),
-      ];
-      
-    function preventDefault(event) {
-        event.preventDefault();
-      }
+  const [open, setOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  
+  const handleCreateModal = (event) => {
+    setOpen(true);
+    setAnchorEl(event.currentTarget);
+  };
+  
+  const handleCloseCreateModal = () => {
+    setOpen(false);
+  };
   return (
     <Box>
-        <Title>Recent Orders</Title>
+      <Title>Promocodes- Deposit</Title>
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>ID</TableCell>
-            <TableCell>Users</TableCell>
-            <TableCell>Date</TableCell>
-            <TableCell> Amount</TableCell>
-            <TableCell>Status</TableCell>
-            <TableCell align="right">Manage</TableCell>
+            <TableCell>Code</TableCell>
+            <TableCell>Amount</TableCell>
+            <TableCell>Usage</TableCell>
+            <TableCell>Expiration</TableCell>
+            <TableCell>Created</TableCell>
+            <TableCell>Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.ID}>
-              <TableCell>{row.Date}</TableCell>
-              <TableCell>{row.Users}</TableCell>
-              <TableCell>{row.Amount}</TableCell>
-              <TableCell>{row.Status}</TableCell>
-              <TableCell align="right">{`$${row.Manage}`}</TableCell>
+          {rows.map((row, index) => (
+            <TableRow key={index}>
+              <TableCell>{row.code}</TableCell>
+              <TableCell>{row.amount}</TableCell>
+              <TableCell>{row.usage}</TableCell>
+              <TableCell>{row.expiration}</TableCell>
+              <TableCell>{row.created}</TableCell>
+              <TableCell>
+                <Button
+                  sx={{
+                    variant: "contained",
+                    color: "white",
+                    backgroundColor: "blue",
+                    borderRadius: "30px",
+                    paddingX: "10px",
+                    ":hover": { backgroundColor: "blue" },
+                  }}
+                >
+                  <CloseIcon sx={{ fontSize: "14px" }} />
+                  <Typography
+                    sx={{
+                      textIndent: "5px",
+                    }}
+                  >
+                    Delete
+                  </Typography>
+                </Button>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
+        <TableFooter>
+          <TableRow>
+            <Box display="flex" flexDirection="row" gap={1}>
+              <Button
+                onClick={handleCreateModal}
+                sx={{
+                  px: "1rem",
+                  color: "white",
+                  backgroundColor: "blue",
+                  borderRadius: "1rem",
+                  ":hover": { backgroundColor: "blue" },
+                }}
+              >
+                <AddIcon sx={{ fontSize: "14px", mx: "0.3rem" }} />
+                <Typography>Create</Typography>
+              </Button>
+              <Button
+                sx={{
+                  px: "1rem",
+                  color: "#000",
+                  backgroundColor: "#858587",
+                  borderRadius: "1rem",
+                  ":hover": { backgroundColor: "#858587" },
+                }}
+              >
+                <CloseIcon sx={{ fontSize: "14px", mx: "0.3rem" }} />
+                <Typography>Delete-expired</Typography>
+              </Button>
+            </Box>
+          </TableRow>
+        </TableFooter>
       </Table>
-      <Link color="primary" href="#" onClick={preventDefault} sx={{ mt: 3 }}>
-        See more orders
-      </Link>
+      <CreateModal open={open} onClose={handleCloseCreateModal} anchorEl={anchorEl} />
     </Box>
-  )
-}
+  );
+};
 
-export default Deposits
+export default Deposits;

@@ -8,10 +8,10 @@ const Palette = (mode) => {
       primary: {
         main: "#fff"
       },
-      common: {
-        black: 'red',
-        white: 'red',
-      },
+      // common: {
+      //   black: '#fff',
+      //   white: '#fff',
+      // },
       text: {
         primary: "#fff",
         secondary: "#BEBEBE",

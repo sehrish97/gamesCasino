@@ -31,7 +31,6 @@ const system = {
       id: "SSH",
       title: "SSH",
       type: "item",
-      url: "/admin/SSH",
       icon: icons.SelfImprovementIcon,
       breadcrumbs: false,
     },
