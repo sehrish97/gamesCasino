@@ -32,7 +32,7 @@ import SSL from "../pages/System/SSL";
 import Database from "../pages/System/Database";
 import FileManager from "../pages/System/FileManager";
 import Update from "../pages/System/Update";
-import Logs from "../pages/System/Logs";
+// import Logs from "../pages/System/Logs";
 
 
 const Routing = () => {
@@ -70,7 +70,7 @@ const Routing = () => {
           <Route path="admin/database" element={<Database />} />
           <Route path="admin/files" element={<FileManager />} />
           <Route path="admin/ota" element={<Update />} />
-          <Route path="admin/logs" element={<Logs />} />
+          {/* <Route path="admin/logs" element={<Logs />} /> */}
         </Route>
       </Route>
     </Routes>
