@@ -6,9 +6,7 @@ import { drawerWidth } from "../../../config";
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
-  margin: "2rem 2rem",
-  borderRadius: "1rem",
-  maxHeight: "95vh",
+  maxHeight: "100vh",
   borderRight: `1px solid ${theme.palette.divider}`,
   transition: theme.transitions.create("width", {
     easing: theme.transitions.easing.sharp,
@@ -41,21 +39,27 @@ const closedMixin = (theme) => ({
     duration: theme.transitions.duration.leavingScreen,
   }),
   overflowX: "hidden",
-  margin: "2rem 2rem",
-  borderRadius: "1rem",
   maxHeight: "95vh",
-  width: "5rem",
+  width: "0",
   borderRight: "none",
   boxShadow: theme.customShadows.z1,
 });
 
-const MiniDrawerStyled = styled(Drawer, { shouldForwardProp: (prop) => prop !== "open" })(({ theme, open }) => ({
+const MiniDrawerStyled = styled(Drawer, {
+  shouldForwardProp: (prop) => prop !== "open",
+})(({ theme, open }) => ({
   width: drawerWidth,
   flexShrink: 0,
   whiteSpace: "nowrap",
   boxSizing: "border-box",
-  ...(open && { ...openedMixin(theme), "& .MuiDrawer-paper": openedMixin(theme) }),
-  ...(!open && { ...closedMixin(theme), "& .MuiDrawer-paper": closedMixin(theme) }),
+  ...(open && {
+    ...openedMixin(theme),
+    "& .MuiDrawer-paper": openedMixin(theme),
+  }),
+  ...(!open && {
+    ...closedMixin(theme),
+    "& .MuiDrawer-paper": closedMixin(theme),
+  }),
 }));
 
 export default MiniDrawerStyled;

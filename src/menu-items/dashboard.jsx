@@ -2,12 +2,37 @@
 import NoteAltIcon from "@mui/icons-material/NoteAlt";
 import HubIcon from "@mui/icons-material/Hub";
 import SelfImprovementIcon from "@mui/icons-material/SelfImprovement";
-
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import GroupIcon from '@mui/icons-material/Group';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import WaterIcon from '@mui/icons-material/Water';
+import PercentIcon from '@mui/icons-material/Percent';
+import SportsVolleyballIcon from '@mui/icons-material/SportsVolleyball';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
+import LocalActivityIcon from '@mui/icons-material/LocalActivity';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 // icons
 const icons = {
   NoteAltIcon,
   HubIcon,
   SelfImprovementIcon,
+  DashboardIcon,
+  NotificationsIcon,
+  GroupIcon,
+  AutoAwesomeIcon,
+  WaterIcon,
+  PercentIcon,
+  SportsVolleyballIcon,
+  AccountBalanceWalletIcon,
+  WorkspacePremiumIcon,
+  ConfirmationNumberIcon,
+  LocalActivityIcon,
+  TelegramIcon,
+  ContentCopyIcon
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
@@ -24,7 +49,8 @@ const dashboard = {
       title: "Dashboard",
       type: "item",
       url: "/admin",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.DashboardIcon
+      ,
       breadcrumbs: false,
     },
     {
@@ -32,7 +58,7 @@ const dashboard = {
       title: "Notifications",
       type: "item",
       url: "/admin/notifications  ",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.NotificationsIcon,
       breadcrumbs: false,
     },
     {
@@ -40,7 +66,7 @@ const dashboard = {
       title: "Users",
       type: "item",
       url: "/admin/users",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.GroupIcon,
       breadcrumbs: false,
     },
     {
@@ -48,7 +74,7 @@ const dashboard = {
       title: "Analytics",
       type: "item",
       url: "/admin/games/stats",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.AutoAwesomeIcon,
       breadcrumbs: false,
     },
     {
@@ -56,14 +82,14 @@ const dashboard = {
       title: "Activity",
       type: "item",
       url: "/admin/activity",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.WaterIcon,
       breadcrumbs: false,
     },
     {
       id: "promocodes",
       title: "Promocodes",
       type: "collapse",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.PercentIcon,
       breadcrumbs: false,
       children: [
         {
@@ -71,14 +97,14 @@ const dashboard = {
           title: "Deposits",
           type: "item",
           url: "/admin/promocodes",
-          icon: icons.SelfImprovementIcon,
+          icon: icons.AccountBalanceWalletIcon,
         },
         {
           id: "bonus",
           title: "Bonus",
           type: "item",
           url: "/admin/promocodes/bonus  ",
-          icon: icons.SelfImprovementIcon,
+          icon: icons.WorkspacePremiumIcon,
         },
       ],
     },
@@ -86,7 +112,7 @@ const dashboard = {
       id: "sportsbook",
       title: "Sportsbook",
       type: "collapse",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.SportsVolleyballIcon,
       breadcrumbs: false,
       children: [
         {
@@ -94,21 +120,21 @@ const dashboard = {
           title: "Single Slips",
           type: "item",
           url: "/admin/sport/singleSlips",
-          icon: icons.SelfImprovementIcon,
+          icon: icons.ConfirmationNumberIcon,
         },
         {
           id: "multi-slips",
           title: "Multi Slips",
           type: "item",
           url: "admin/sport/multiSlips",
-          icon: icons.SelfImprovementIcon,
+          icon: icons.LocalActivityIcon,
         },
         {
           id: "featured",
           title: "Featured",
           type: "item",
           url: "/admin/sport/featured",
-          icon: icons.SelfImprovementIcon,
+          icon: icons.AutoAwesomeIcon,
         },
       ],
     },
@@ -116,7 +142,7 @@ const dashboard = {
       id: "telegram",
       title: "Telegram",
       type: "collapse",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.TelegramIcon,
       breadcrumbs: false,
       children: [
         {
@@ -124,7 +150,7 @@ const dashboard = {
           title: "Templates",
           type: "item",
           url: "admin/database/telegram_templates",
-          icon: icons.SelfImprovementIcon,
+          icon: icons.ContentCopyIcon,
         },
       ],
     },

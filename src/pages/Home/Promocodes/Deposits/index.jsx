@@ -28,12 +28,12 @@ const rows = [
 const Deposits = () => {
   const [open, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
-  
+
   const handleCreateModal = (event) => {
     setOpen(true);
     setAnchorEl(event.currentTarget);
   };
-  
+
   const handleCloseCreateModal = () => {
     setOpen(false);
   };
@@ -43,12 +43,12 @@ const Deposits = () => {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>Code</TableCell>
-            <TableCell>Amount</TableCell>
-            <TableCell>Usage</TableCell>
-            <TableCell>Expiration</TableCell>
-            <TableCell>Created</TableCell>
-            <TableCell>Actions</TableCell>
+            <TableCell sx={{ borderBottom: "none" , fontSize:"16px"}}>Code</TableCell>
+            <TableCell sx={{ borderBottom: "none" , fontSize:"16px"}}>Amount</TableCell>
+            <TableCell sx={{ borderBottom: "none" , fontSize:"16px"}}>Usage</TableCell>
+            <TableCell sx={{ borderBottom: "none" , fontSize:"16px"}}>Expiration</TableCell>
+            <TableCell sx={{ borderBottom: "none" , fontSize:"16px"}}>Created</TableCell>
+            <TableCell sx={{ borderBottom: "none" , fontSize:"16px"}}>Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -115,7 +115,11 @@ const Deposits = () => {
           </TableRow>
         </TableFooter>
       </Table>
-      <CreateModal open={open} onClose={handleCloseCreateModal} anchorEl={anchorEl} />
+      <CreateModal
+        open={open}
+        onClose={handleCloseCreateModal}
+        anchorEl={anchorEl}
+      />
     </Box>
   );
 };

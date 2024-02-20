@@ -1,0 +1,15 @@
+
+.custom-calendar .rdrMonthAndYearWrapper {
+    background-color: #212121;
+    color: white;
+  }
+
+.custom-calendar .rdrMonth {
+    background-color: #212121;
+    color: white;
+  }
+  
+.custom-calendar .rdrDayNumber span {
+    color: white;
+  }
+  

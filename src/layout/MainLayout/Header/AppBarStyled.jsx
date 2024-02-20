@@ -15,7 +15,8 @@ const AppBarStyled = styled(AppBar,{shouldForwardProp:(prop)=> prop!== 'open'})(
             easing: theme.transitions.easing.sharp,
             duration:theme.transitions.duration.enteringScreen
         })
-    })
+    }),
+   
 }))
 
 export default AppBarStyled;
