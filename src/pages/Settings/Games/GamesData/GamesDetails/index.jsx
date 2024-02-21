@@ -13,6 +13,25 @@ import Diamonds from "./Diamonds";
 import Roulette from "./Roulette";
 import Hilo from "./Hilo";
 import Limbo from "./Limbo";
+import DragonsLair from "./DragonsLair";
+import SpaceGalaxy from "./SpaceGalaxy";
+import TreasureHunt from "./TreasureHunt";
+import WestCowboys from "./WestCowboys";
+import Dinosaurs from "./Dinosaurs";
+import EarthEvolution from "./EarthEvolution";
+import DivineDiamonds from "./DivineDiamonds";
+import PiratesOfTheCaribbean from "./PiratesOfTheCaribbean";
+import Vikings from "./Vikings";
+import HalloweenNight from "./HalloweenNight";
+import WildWest from "./WildWest";
+import WildFruits from "./WildFruits";
+import WildFlowers from "./WildFlowers";
+import Meteorite from "./Meteorite";
+import VideoPoker from "./VideoPoker";
+import Sweets from "./Sweets";
+import Spiral from "./Spiral";
+import PheonixRises from "./PhoenixRises";
+import AlchemistsLab from "./AlchemistsLab";
 
 const IOSSwitch = styled((props) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -68,6 +87,7 @@ const IOSSwitch = styled((props) => (
 
 const GamesDetails = () => {
   const { gameName } = useParams();
+  console.log(gameName,"pheonix gambling")
   return (
     <Box
       sx={{
@@ -100,6 +120,24 @@ const GamesDetails = () => {
       {gameName === "roulette" && <Roulette />}
       {gameName === "hilo" && <Hilo />}
       {gameName === "limbo" && <Limbo />}
+      {gameName === "dragon's lair" && <DragonsLair />}
+      {gameName === "treasure hunt" && <TreasureHunt />}
+      {gameName === "west cowboys" && <WestCowboys />}
+      {gameName === "dinosaurs" && <Dinosaurs />}
+      {gameName === "earth evolution" && <EarthEvolution />}
+      {gameName === "divine diamonds" && <DivineDiamonds />}
+      {gameName === "pirates of the caribbean" && <PiratesOfTheCaribbean />}
+      {gameName === "vikings" && <Vikings />}
+      {gameName === "halloween night" && <HalloweenNight />}
+      {gameName === "wild west" && <WildWest />}
+      {gameName === "wild fruits" && <WildFruits />}
+      {gameName === "wild flowers" && <WildFlowers />}
+      {gameName === "meteorite" && <Meteorite />}
+      {gameName === "video poker" && <VideoPoker />}
+      {gameName === "sweets" && <Sweets />}
+      {gameName === "spiral" && <Spiral />}
+      {gameName === "phoenix rises" && <PheonixRises />}
+      {gameName === "alchemist's lab" && <AlchemistsLab />}
     </Box>
   );
 };

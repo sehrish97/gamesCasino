@@ -142,7 +142,13 @@ let content = [
   },
 ];
 
+
 const PheonixGamblingSlotData = () => {
+  // function generateSlug(gameName) {
+  //   let slug = gameName.replace(/[^a-zA-Z0-9 ]/g, "");
+  //   slug = slug.replace(/\s+/g, "");
+  //   return  slug;
+  // }
   return (
     <Box>
       {content.map((games) => (
@@ -169,7 +175,7 @@ const PheonixGamblingSlotData = () => {
             }}
           >
             {games.games.map((item) => (
-              <Link key={item.id} to={`/games/${item.name.toLowerCase()}`}>
+              <Link key={item.id} to={`/games/external:${item.name.toLowerCase()}`}>
                 <Box
                   sx={{
                     borderRadius: "10px",

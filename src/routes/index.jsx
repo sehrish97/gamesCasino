@@ -33,8 +33,8 @@ import Database from "../pages/System/Database";
 import FileManager from "../pages/System/FileManager";
 import Update from "../pages/System/Update";
 import GamesDetails from "../pages/Settings/Games/GamesData/GamesDetails";
-import PheonixDetail from "../pages/Settings/Games/PheonixGamblingSlotData/PheonixDetail";
 import TelegramDetails from "../pages/Settings/Games/TelegramData/TelegramDetails";
+import PheonixDetail from "../pages/Settings/Games/PheonixGamblingSlotData/PheonixDetail";
 // import Logs from "../pages/System/Logs";
 
 
@@ -74,11 +74,9 @@ const Routing = () => {
           <Route path="admin/database" element={<Database />} />
           <Route path="admin/files" element={<FileManager />} />
           <Route path="admin/ota" element={<Update />} />
-
           <Route path="/games/:gameName"  element={<GamesDetails />}/>
           <Route path="/games/telegram:slot"  element={<TelegramDetails />}/>
           <Route path="/games/external:gameName"  element={<PheonixDetail />}/>
-
           {/* <Route path="admin/logs" element={<Logs />} /> */}
         </Route>
       </Route>

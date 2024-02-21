@@ -1,87 +1,89 @@
-import { Box, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
-const ExternalGamesData = ({ gameData }) => {
+import { Box, Switch } from "@mui/material";
+import { useParams } from "react-router-dom";
+import { styled } from "@mui/material/styles";
+
+const IOSSwitch = styled((props) => (
+  <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
+))(({ theme }) => ({
+  width: 42,
+  height: 26,
+  padding: 0,
+  "& .MuiSwitch-switchBase": {
+    padding: 0,
+    margin: 2,
+    transitionDuration: "300ms",
+    "&.Mui-checked": {
+      transform: "translateX(16px)",
+      color: "#fff",
+      "& + .MuiSwitch-track": {
+        backgroundColor: theme.palette.mode === "dark" ? "#4bcb27" : "#4bcb27",
+        opacity: 1,
+        border: 0,
+      },
+      "&.Mui-disabled + .MuiSwitch-track": {
+        opacity: 0.5,
+      },
+    },
+    "&.Mui-focusVisible .MuiSwitch-thumb": {
+      color: "#4bcb27",
+      border: "6px solid #fff",
+    },
+    "&.Mui-disabled .MuiSwitch-thumb": {
+      color:
+        theme.palette.mode === "light"
+          ? theme.palette.grey[100]
+          : theme.palette.grey[600],
+    },
+    "&.Mui-disabled + .MuiSwitch-track": {
+      opacity: theme.palette.mode === "light" ? 0.7 : 0.3,
+    },
+  },
+  "& .MuiSwitch-thumb": {
+    boxSizing: "border-box",
+    width: 22,
+    height: 22,
+  },
+  "& .MuiSwitch-track": {
+    borderRadius: 26 / 2,
+    backgroundColor:
+      theme.palette.mode === "light" ? "rgba(255,255,255,.15)" : "#39393D",
+    opacity: 1,
+    transition: theme.transitions.create(["background-color"], {
+      duration: 500,
+    }),
+  },
+}));
+
+const PheonixDetail = () => {
+  const fullPath = window.location.pathname;
+  console.log(fullPath,"pathname");
+  console.log("hey ");
+  // const telegramName = fullPath.split(":")[1];
+  // console.log(telegramName, 'telegramName')
   return (
-    <Box>
-      {gameData.map((games) => (
-        <>
-          <Box
-            sx={{
-              marginTop: "10px",
-            }}
-          >
-            <Typography
-              sx={{
-                fontSize: "1.3rem",
-              }}
-            >
-              {games.title}
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              marginBottom: "25px",
-              flexWrap: "wrap",
-              alignItems: "center",
-            }}
-          >
-            {games.games.map((item) => (
-              <Link key={item.id} to={`/games/telegram:${item.name.toLowerCase()}`}>
-                <Box
-                  sx={{
-                    borderRadius: "10px",
-                    margin: "10px",
-                    cursor: "pointer",
-                    transition: "transform .4s ease-in-out",
-                    "&:hover": {
-                      transform: "scale(1.05)",
-                    },
-                  }}
-                  key={item.id}
-                >
-                  <Box
-                    sx={{
-                      width: "150px",
-                      height: "150px",
-                      borderRadius: "10px",
-                      backgroundImage: `url(${item.imageUrl})`,
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "flex-start", // Align items horizontally
-                        alignItems: "flex-end", // Align items to bottom
-                        height: "100%", // Make container take full height
-                        padding: "8px", // Add padding to bottom
-                        color: "white",
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          background: "rgba(0,0,0,0.5)",
-                          borderRadius: "3px",
-                          padding: "5px 10px",
-                          whiteSpace: "nowrap",
-                          overflow: "hidden",
-                          textOverflow: "ellipsis",
-                        }}
-                      >
-                        {item.name}
-                      </Typography>
-                    </Box>
-                  </Box>
-                </Box>
-              </Link>
-            ))}
-          </Box>
-        </>
-      ))}
+    <Box
+      sx={{
+        padding: "40px 50px",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <Box
+        sx={{
+          fontSize: "3rem",
+          marginBottom: "35px",
+          display: "flex",
+          alignItems: "center",
+          textTransform: "capitalize",
+        }}
+      >
+        hello world
+        {fullPath}
+      </Box>
+      {/* {fullPath === "external:dragon's lair" && <DragonsLair />} */}
     </Box>
   );
 };
 
-export default ExternalGamesData;
+export default PheonixDetail;
