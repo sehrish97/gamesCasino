@@ -19,6 +19,7 @@
     "@emotion/styled": "^11.11.0",
     "@material-ui/pickers": "^3.3.11",
     "@mui/icons-material": "^5.15.7",
+    "@mui/lab": "^5.0.0-alpha.165",
     "@mui/material": "^5.15.7",
     "@mui/x-charts": "^6.19.3",
     "@mui/x-data-grid": "^6.17.0",

@@ -138,6 +138,7 @@ const GamesDetails = () => {
       {gameName === "spiral" && <Spiral />}
       {gameName === "phoenix rises" && <PheonixRises />}
       {gameName === "alchemist's lab" && <AlchemistsLab />}
+      {gameName === "space galaxy" && <SpaceGalaxy />}
     </Box>
   );
 };

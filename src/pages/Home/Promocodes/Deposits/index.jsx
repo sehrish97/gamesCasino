@@ -43,23 +43,23 @@ const Deposits = () => {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell sx={{ borderBottom: "none" , fontSize:"16px"}}>Code</TableCell>
-            <TableCell sx={{ borderBottom: "none" , fontSize:"16px"}}>Amount</TableCell>
-            <TableCell sx={{ borderBottom: "none" , fontSize:"16px"}}>Usage</TableCell>
-            <TableCell sx={{ borderBottom: "none" , fontSize:"16px"}}>Expiration</TableCell>
-            <TableCell sx={{ borderBottom: "none" , fontSize:"16px"}}>Created</TableCell>
-            <TableCell sx={{ borderBottom: "none" , fontSize:"16px"}}>Actions</TableCell>
+            <TableCell sx={{ borderBottom: "none" , fontSize:"16px",paddingBottom:"25px"}}>Code</TableCell>
+            <TableCell sx={{ borderBottom: "none" , fontSize:"16px",paddingBottom:"25px"}}>Amount</TableCell>
+            <TableCell sx={{ borderBottom: "none" , fontSize:"16px",paddingBottom:"25px"}}>Usage</TableCell>
+            <TableCell sx={{ borderBottom: "none" , fontSize:"16px",paddingBottom:"25px"}}>Expiration</TableCell>
+            <TableCell sx={{ borderBottom: "none" , fontSize:"16px",paddingBottom:"25px"}}>Created</TableCell>
+            <TableCell sx={{ borderBottom: "none" , fontSize:"16px",paddingBottom:"25px"}}>Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row, index) => (
             <TableRow key={index}>
-              <TableCell>{row.code}</TableCell>
-              <TableCell>{row.amount}</TableCell>
-              <TableCell>{row.usage}</TableCell>
-              <TableCell>{row.expiration}</TableCell>
-              <TableCell>{row.created}</TableCell>
-              <TableCell>
+              <TableCell sx={{borderBottom:"none !important",fontSize:"14.4px",cursor:"pointer",paddingBottom:"25px"}}>{row.code}</TableCell>
+              <TableCell sx={{borderBottom:"none !important",fontSize:"14.4px",cursor:"pointer",paddingBottom:"25px"}}>{row.amount}</TableCell>
+              <TableCell sx={{borderBottom:"none !important",fontSize:"14.4px",cursor:"pointer",paddingBottom:"25px"}}>{row.usage}</TableCell>
+              <TableCell sx={{borderBottom:"none !important",fontSize:"14.4px",cursor:"pointer",paddingBottom:"25px"}}>{row.expiration}</TableCell>
+              <TableCell sx={{borderBottom:"none !important",fontSize:"14.4px",cursor:"pointer",paddingBottom:"25px"}}>{row.created}</TableCell>
+              <TableCell sx={{borderBottom:"none !important",fontSize:"14.4px",cursor:"pointer",paddingBottom:"25px"}}>
                 <Button
                   sx={{
                     variant: "contained",
