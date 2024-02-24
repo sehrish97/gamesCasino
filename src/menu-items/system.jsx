@@ -2,12 +2,14 @@
 import NoteAltIcon from "@mui/icons-material/NoteAlt";
 import HubIcon from "@mui/icons-material/Hub";
 import SelfImprovementIcon from "@mui/icons-material/SelfImprovement";
+import VerifiedOutlinedIcon from '@mui/icons-material/VerifiedOutlined';
 
 // icons
 const icons = {
   NoteAltIcon,
   HubIcon,
   SelfImprovementIcon,
+  VerifiedOutlinedIcon,
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
@@ -24,7 +26,7 @@ const system = {
       title: "License",
       type: "item",
       url: "/admin/license",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.VerifiedOutlinedIcon,
       breadcrumbs: false,
     },
     {

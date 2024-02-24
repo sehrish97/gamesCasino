@@ -2,12 +2,15 @@
 import NoteAltIcon from "@mui/icons-material/NoteAlt";
 import HubIcon from "@mui/icons-material/Hub";
 import SelfImprovementIcon from "@mui/icons-material/SelfImprovement";
-
+import ArrowDownwardOutlinedIcon from '@mui/icons-material/ArrowDownwardOutlined';
+import ArrowUpwardOutlinedIcon from '@mui/icons-material/ArrowUpwardOutlined';
 // icons
 const icons = {
   NoteAltIcon,
   HubIcon,
   SelfImprovementIcon,
+  ArrowDownwardOutlinedIcon,
+  ArrowUpwardOutlinedIcon
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
@@ -24,7 +27,7 @@ const wallet = {
       title: "Deposits",
       type: "item",
       url: "/admin/deposits",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.ArrowDownwardOutlinedIcon,
       breadcrumbs: false,
     },
     {
@@ -32,7 +35,7 @@ const wallet = {
       title: "Withdraws",
       type: "item",
       url: "/admin/withdraws",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.ArrowUpwardOutlinedIcon,
       breadcrumbs: false,
     },
     

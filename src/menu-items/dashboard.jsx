@@ -32,7 +32,7 @@ const icons = {
   ConfirmationNumberIcon,
   LocalActivityIcon,
   TelegramIcon,
-  ContentCopyIcon
+  ContentCopyIcon,
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //

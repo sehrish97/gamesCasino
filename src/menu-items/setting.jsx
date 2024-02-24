@@ -2,12 +2,35 @@
 import NoteAltIcon from "@mui/icons-material/NoteAlt";
 import HubIcon from "@mui/icons-material/Hub";
 import SelfImprovementIcon from "@mui/icons-material/SelfImprovement";
+import CardGiftcardOutlinedIcon from '@mui/icons-material/CardGiftcardOutlined';
+import PhotoLibraryOutlinedIcon from '@mui/icons-material/PhotoLibraryOutlined';
+import PaletteOutlinedIcon from '@mui/icons-material/PaletteOutlined';
+import FormatColorFillOutlinedIcon from '@mui/icons-material/FormatColorFillOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
+import AdUnitsOutlinedIcon from '@mui/icons-material/AdUnitsOutlined';
+import StarsOutlinedIcon from '@mui/icons-material/StarsOutlined';
+import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
+import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlined';
+
+
 
 // icons
 const icons = {
   NoteAltIcon,
   HubIcon,
   SelfImprovementIcon,
+  CardGiftcardOutlinedIcon,
+  PhotoLibraryOutlinedIcon,
+  PaletteOutlinedIcon,
+  FormatColorFillOutlinedIcon,
+  SettingsOutlinedIcon,
+  AccountBalanceWalletOutlinedIcon,
+  AdUnitsOutlinedIcon,
+  StarsOutlinedIcon,
+  SmartToyOutlinedIcon,
+  QuestionAnswerOutlinedIcon
+  
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
@@ -24,7 +47,7 @@ const setting = {
       title: "Plugins",
       type: "item",
       url: "/admin/plugins",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.CardGiftcardOutlinedIcon,
       breadcrumbs: false,
     },
     {
@@ -32,7 +55,7 @@ const setting = {
       title: "Slider",
       type: "item",
       url: "/admin/slider",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.PhotoLibraryOutlinedIcon,
       breadcrumbs: false,
     },
     {
@@ -40,7 +63,7 @@ const setting = {
       title: "Themes",
       type: "item",
       url: "/admin/themes",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.PaletteOutlinedIcon,
       breadcrumbs: false,
     },
     {
@@ -48,15 +71,15 @@ const setting = {
       title: "Appearance",
       type: "item",
       url: "/admin/appearance",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.FormatColorFillOutlinedIcon,
       breadcrumbs: false,
     },
     {
       id: "roles",
-      title: "roles",
+      title: "Roles",
       type: "item",
       url: "/admin/roles",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.SettingsOutlinedIcon,
       breadcrumbs: false,
     },
     {
@@ -64,7 +87,7 @@ const setting = {
       title: "Wallet",
       type: "item",
       url: "/admin/wallet",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.AccountBalanceWalletOutlinedIcon,
       breadcrumbs: false,
     },
     {
@@ -72,7 +95,7 @@ const setting = {
       title: "Banner",
       type: "item",
       url: "/admin/banner",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.AdUnitsOutlinedIcon,
       breadcrumbs: false,
     },
     {
@@ -80,7 +103,7 @@ const setting = {
       title: "VIP",
       type: "item",
       url: "/admin/vip",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.StarsOutlinedIcon,
       breadcrumbs: false,
     },
     {
@@ -88,7 +111,7 @@ const setting = {
       title: "Bots",
       type: "collapse",
       url: "/admin/bots",
-      icon: icons.SelfImprovementIcon,
+      icon: icons.SmartToyOutlinedIcon,
       breadcrumbs: false,
       children: [
         {
@@ -103,7 +126,7 @@ const setting = {
           title: "chat",
           type: "item",
           url: "/admin/bots/chat",
-          icon: icons.SelfImprovementIcon,
+          icon: icons.QuestionAnswerOutlinedIcon,
         },
       ],
     },
