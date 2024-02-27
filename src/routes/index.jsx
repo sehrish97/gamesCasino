@@ -35,6 +35,8 @@ import Update from "../pages/System/Update";
 import GamesDetails from "../pages/Settings/Games/GamesData/GamesDetails";
 import TelegramDetails from "../pages/Settings/Games/TelegramData/TelegramDetails";
 import PheonixDetail from "../pages/Settings/Games/PheonixGamblingSlotData/PheonixDetail";
+import Casino from "../pages/Settings/Slider/SliderContent/Casino";
+import Sport from "../pages/Settings/Slider/SliderContent/Sport";
 // import Logs from "../pages/System/Logs";
 
 
@@ -77,6 +79,8 @@ const Routing = () => {
           <Route path="/games/:gameName"  element={<GamesDetails />}/>
           <Route path="/games/telegram:slot"  element={<TelegramDetails />}/>
           <Route path="/games/external:gameName"  element={<PheonixDetail />}/>
+          <Route path="/admin/slider/casino" element={<Casino />} />
+          <Route path="/admin/slider/sports" element={<Sport />} />
           {/* <Route path="admin/logs" element={<Logs />} /> */}
         </Route>
       </Route>
