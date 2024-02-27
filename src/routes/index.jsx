@@ -39,14 +39,13 @@ import Casino from "../pages/Settings/Slider/SliderContent/Casino";
 import Sport from "../pages/Settings/Slider/SliderContent/Sport";
 // import Logs from "../pages/System/Logs";
 
-
 const Routing = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<MainLayout />}>
           <Route path="/" element={<Navigate to="/admin" />} />
-          
+
           <Route path="/admin" element={<Dashboard />} />
           <Route path="/admin/notifications" element={<Notifications />} />
           <Route path="/admin/users" element={<Users />} />
@@ -57,7 +56,10 @@ const Routing = () => {
           <Route path="/admin/sport/singleSlips" element={<SingleSlip />} />
           <Route path="admin/sport/multiSlips" element={<MultiSlip />} />
           <Route path="admin/sport/featured" element={<Featured />} />
-          <Route path="admin/database/telegram_templates" element={<Telegram />} />
+          <Route
+            path="admin/database/telegram_templates"
+            element={<Telegram />}
+          />
           <Route path="admin/deposits" element={<WalletDeposit />} />
           <Route path="admin/withdraws" element={<WalletWithdraws />} />
           <Route path="admin/plugins" element={<Plugins />} />
@@ -76,11 +78,12 @@ const Routing = () => {
           <Route path="admin/database" element={<Database />} />
           <Route path="admin/files" element={<FileManager />} />
           <Route path="admin/ota" element={<Update />} />
-          <Route path="/games/:gameName"  element={<GamesDetails />}/>
-          <Route path="/games/telegram:slot"  element={<TelegramDetails />}/>
-          <Route path="/games/external:gameName"  element={<PheonixDetail />}/>
-          <Route path="/admin/slider/casino" element={<Casino />} />
-          <Route path="/admin/slider/sports" element={<Sport />} />
+          <Route path="/games/:gameName" element={<GamesDetails />} />
+          <Route path="/games/telegram:slot" element={<TelegramDetails />} />
+          <Route path="/games/external:gameName" element={<PheonixDetail />} />
+
+          <Route path="/admin/slider/:id" element={<Casino />} />
+          <Route path="/admin/slider/:id" element={<Sport />} />
           {/* <Route path="admin/logs" element={<Logs />} /> */}
         </Route>
       </Route>

@@ -44,6 +44,11 @@ const Appearance = () => {
             sx={{
               display: "flex",
               alignItems: "center",
+              '@media (max-width: 600px)':{
+                flexDirection:"column",
+                alignItems: "flex-start",
+                gap:2
+              }
             }}
           >
             <Box sx={{ marginRight: "25px" }}>
@@ -66,18 +71,20 @@ const Appearance = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={{marginTop:"35px"}}>
-        <Typography sx={{ marginBottom: "20px", fontSize: "1.1em" }}>
-        Website favicon (16x16 px)
+        <Box sx={{ marginTop: "35px",marginBottom: "35px" }}>
+          <Typography sx={{ marginBottom: "20px", fontSize: "1.1em" }}>
+            Website favicon (16x16 px)
           </Typography>
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
+              flexWrap:"wrap",
+              gap:2
             }}
           >
             <Box sx={{ marginRight: "25px" }}>
-            <Button
+              <Button
                 component="label"
                 variant="contained"
                 startIcon={<UploadOutlinedIcon />}
@@ -90,13 +97,82 @@ const Appearance = () => {
               >
                 Upload
               </Button>
-              <Box sx={{display:"flex",alignItems:"center",justifyContent:"center"}}>
-                <Box sx={{background:"#201f25", display:"flex", borderRadius:"15px",padding:"0px 20px"}}>
-
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Box
+                  sx={{
+                    background: "#201f25",
+                    display: "flex",
+                    borderRadius: "15px",
+                    padding: "0px 20px",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      marginRight: "15px",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        backgroundColor: "#fa6350",
+                        width: "12px",
+                        height: "12px",
+                        marginRight: " 8px",
+                        borderRadius: " 50%",
+                      }}
+                    ></Box>
+                    <Box
+                      sx={{
+                        backgroundColor: "#fcbb2e",
+                        width: "12px",
+                        height: "12px",
+                        marginRight: " 8px",
+                        borderRadius: " 50%",
+                      }}
+                    ></Box>
+                    <Box
+                      sx={{
+                        backgroundColor: "#2bc63e",
+                        width: "12px",
+                        height: "12px",
+                        marginRight: " 0px",
+                        borderRadius: " 50%",
+                      }}
+                    ></Box>
+                  </Box>
+                  <Box sx={{
+                    background: "#24232a",
+                    padding: "10px 15px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px",
+                    display: "flex",
+                    alignItems: "center",
+                    fontsize: ".9em",
+                  }}>
+                    <img src="/public/assets/phoenix.png" width={16} height={16} style={{marginRight:"10px"}}/>
+                    Phoenix
+                  </Box>
                 </Box>
               </Box>
-            </Box>
           </Box>
+        </Box>
+        <Box sx={{marginBottom:0}}>
+        <Typography sx={{ marginBottom: "20px", fontSize: "1.1em" }}>
+        Website name
+          </Typography>
+          <TextField sx={{backgroundColor:"#24232a", color:"#fff",
+            padding: "5px 10px",
+            borderRadius: "10px",
+            opacity:.5,
+            pointerEvents:"none"}} placeholder="Pheonix" type="text" />
         </Box>
       </Box>
     </Box>

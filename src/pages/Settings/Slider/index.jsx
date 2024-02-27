@@ -1,6 +1,53 @@
 import { Box } from "@mui/material";
 import SliderContent from "./SliderContent";
 const Slider = () => {
+  const sportsData = [
+    {
+      id: "4",
+      title: "Sports",
+      heading: "PLACEHOLDER",
+      subtitle: "Placeholder",
+      discription: "This is a placeholder slide for sports.",
+    },
+    {
+      id: "5",
+      title: "Sports",
+      heading: "PLACEHOLDER",
+      subtitle: "Placeholder",
+      discription: "This is a placeholder slide for sports.",
+    },
+    {
+      id: "6",
+      title: "Sports",
+      heading: "PLACEHOLDER",
+      subtitle: "Placeholder",
+      discription: "This is a placeholder slide for sports.",
+    },
+  ];
+  const casinoData = [
+    {
+      id: "1",
+      title: "Casino",
+      heading: "PLACEHOLDER",
+      subtitle: "Placeholder",
+      discription: "This is a placeholder slide",
+    },
+    {
+      id: "2",
+      title: "Casino",
+      heading: "PLACEHOLDER",
+      subtitle: "Placeholder",
+      discription: "This is a placeholder slide",
+    },
+    {
+      id: "3",
+      title: "Casino",
+      heading: "PLACEHOLDER",
+      subtitle: "Placeholder",
+      discription: "This is a placeholder slide",
+    },
+  ];
+
   return (
     <Box
       sx={{
@@ -21,15 +68,11 @@ const Slider = () => {
         Slider
       </Box>
 
-      <SliderContent title='Casino' 
-      heading='PLACEHOLDER'
-      subtitle='Placeholder' 
-      discription='This is a placeholder slide' />
-      
-      <SliderContent title='Sports' 
-      heading='PLACEHOLDER'
-      subtitle='Placeholder' 
-      discription='This is a placeholder slide for sports.' />
+      <SliderContent
+        data={casinoData}
+      />
+
+      <SliderContent data={sportsData} />
     </Box>
   );
 };
