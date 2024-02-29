@@ -19,6 +19,7 @@
     "@emotion/styled": "^11.11.0",
     "@jaames/iro": "^5.5.2",
     "@material-ui/pickers": "^3.3.11",
+    "@monaco-editor/react": "^4.6.0",
     "@mui/icons-material": "^5.15.7",
     "@mui/lab": "^5.0.0-alpha.165",
     "@mui/material": "^5.15.7",
