@@ -37,7 +37,7 @@ import TelegramDetails from "../pages/Settings/Games/TelegramData/TelegramDetail
 import PheonixDetail from "../pages/Settings/Games/PheonixGamblingSlotData/PheonixDetail";
 import Casino from "../pages/Settings/Slider/SliderContent/Casino";
 import Sport from "../pages/Settings/Slider/SliderContent/Sport";
-import Logs from "../pages/System/Logs";
+import Logs from "../pages/System/LogsComponent";
 
 const Routing = () => {
   return (
