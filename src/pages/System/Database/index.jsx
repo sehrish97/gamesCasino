@@ -67,7 +67,16 @@ const Database = () => {
           }}
         >
           <TabPanel value="testCollection">
-            <TestCollection />
+            <TestCollection
+//               code={`{
+//       "_id" : 1,
+//       "description" : "Example document1"
+//   },
+//   {
+//     "_id" : 1,
+//     "description" : "Example document1"
+// }`}  language="javascript" showLineNumbers={true}
+            />
           </TabPanel>
         </Box>
       </Box>

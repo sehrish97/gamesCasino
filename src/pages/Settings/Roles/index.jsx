@@ -3,9 +3,6 @@
 import { Box, Tab, useMediaQuery, Typography, Button } from "@mui/material";
 import { useState } from "react";
 import { TabPanel, TabContext, TabList } from "@mui/lab";
-import StoreIcon from '@mui/icons-material/Store';
-import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import ExampleRole from "./ExampleRole";
 import Moderator from "./Moderator";
 import Administrator from "./Administrator";
@@ -16,59 +13,7 @@ const Roles = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const cardData = [
-    {
-      title: "Metamask Authentication",
-      version: "3.0.0",
-      description: "Adds one-click authentication using Metamask",
-      author: "@ Phoenix Gambling, https://phoenix-gambling.com",
-      image: '/public/assets/metamask.png',
-      buttons: [
-        { label: 'Uninstall', backgroundColor: 'grey', icon: <FileDownloadOutlinedIcon fontSize="small" /> },
-      ]
-    },
-    {
-      title: "Support Chat",
-      version: "3.0.0",
-      description: "Manage tickets directly on your website",
-      author: "@ Phoenix Gambling, https://phoenix-gambling.com",
-      image: '/public/assets/chaticon.png',
-      buttons: [
-        { label: 'Install', backgroundColor: 'blue', icon: <FileDownloadOutlinedIcon fontSize="small" /> },
-      ]
-    },
-    {
-      title: "Telegram Integration",
-      version: "3.0.0",
-      description: "Adds Telegram integration",
-      author: "@ Phoenix Gambling, https://phoenix-gambling.com",
-      image: '/public/assets/telegramicon.svg',
-      buttons: [
-        { label: 'Configuration', backgroundColor: 'blue', icon: <SettingsOutlinedIcon fontSize="small" /> },
-        { label: 'Uninstall', backgroundColor: 'grey', icon: <FileDownloadOutlinedIcon fontSize="small" /> } // Additional button
-      ]
-    },
-    // Add data for other cards
-  ];
-  const cardData2 = [
-    {
-      title: "Metamask Authentication",
-      version: "3.0.0",
-      description: "Adds one-click authentication using Metamask",
-      author: "@ Phoenix Gambling, https://phoenix-gambling.com",
-      image: '/public/assets/metamask.png',
-
-    },
-    {
-      title: "Telegram Integration",
-      version: "3.0.0",
-      description: "Adds Telegram integration",
-      author: "@ Phoenix Gambling, https://phoenix-gambling.com",
-      image: '/public/assets/telegramicon.svg',
-
-    },
-    // Add data for other cards
-  ];
+ 
 
   return (
     <TabContext sx={{

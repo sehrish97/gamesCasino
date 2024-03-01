@@ -95,7 +95,7 @@ const Logs = () => {
                 key={page}
                 label={page}
                 value={page}
-                sx={{ color: "blue !important", ':focus': { color: "blue" }, 
+                sx={{ color: "#6785FF !important", ':focus': { color: "#6785FF" }, 
               alignItems:"flex-start !important" }}
                 icon={page === "Dashboard" ? <SpeedIcon /> : <ArchiveIcon />}
                 iconPosition="start"
@@ -129,7 +129,7 @@ const Logs = () => {
                 key={page}
                 label={page}
                 value={page}
-                sx={{ color: "blue !important", ':focus': { color: "blue" }, 
+                sx={{ color: "#6785FF !important", ':focus': { color: "#6785FF" }, 
               alignItems:"flex-start !important" }}
                 icon={page === "Dashboard" ? <SpeedIcon /> : <ArchiveIcon />}
                 iconPosition="start"
@@ -140,7 +140,7 @@ const Logs = () => {
           {pages.map((tab, index) => (
             <TabPanel key={index} value={tab}>
               <Box sx={{ padding: "10px", maxHeight: 'calc(100vh - 200px)', overflowY: 'auto' }}>
-                <Typography sx={{ fontSize: "3em", color: "blue" }}>
+                <Typography sx={{ fontSize: "3em", color: "#6785FF" }}>
                   {tab}
                 </Typography>
                 {tab === "Dashboard" ? (

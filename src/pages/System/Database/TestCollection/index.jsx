@@ -33,3 +33,18 @@ const TestCollection = () => {
 };
 
 export default TestCollection;
+// import { CopyBlock, dracula } from 'react-code-blocks';
+// const TestCollection=(props)=> {
+//   return (
+//     <CopyBlock
+//       text={props.code}
+//       language={props.language}
+//       showLineNumbers={props.showLineNumbers}
+//       wrapLines
+//       theme={dracula}
+//       codeBlock
+      
+//     />
+//   );
+// }
+// export default TestCollection;
