@@ -2,22 +2,22 @@ import { Box } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
 import iro from "@jaames/iro";
 
-const ColorSelector = () => {
-  const [pickedColor, setPickedColor] = useState("#ffffff"); // Default color
+const ColorSelector = ({ data, updateInputValue }) => {
+  const [pickedColor, setPickedColor] = useState("#ffffff");
   const colorPickerRef = useRef(null); // Ref to store color picker instance
 
-  // Function to handle color change
+
+
   const handleColorChange = (color) => {
-    // Extract the color and opacity separately
     const colorValue = color.hexString;
     const opacityValue = Math.round(color.alpha * 255)
       .toString(16)
-      .padStart(2, "0"); // Convert opacity to hexadecimal
-    // Combine the color and opacity into a single string
+      .padStart(2, "0");
     const pickedColorValue = `${colorValue}${opacityValue}`;
     setPickedColor(pickedColorValue);
+    updateInputValue(data.id, pickedColorValue);
   };
-
+  
   // Function to initialize color picker
   const initColorPicker = () => {
     const boxPicker = document.getElementById("boxPicker");
@@ -44,12 +44,12 @@ const ColorSelector = () => {
               sliderType: "alpha",
             },
           },
-          {
-            component: iro.ui.Slider,
-            options: {
-              sliderType: "value",
-            },
-          },
+          // {
+          //   component: iro.ui.Slider,
+          //   options: {
+          //     sliderType: "value",
+          //   },
+          // },
         ],
       });
 
