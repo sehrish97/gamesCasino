@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 
-const CustomAccordion = ({buttonName,description,icon,bordercolor,buttoncolor, children }) => {
+const CustomAccordion = ({buttonName,description,icon,bordercolor,buttoncolor,balance, children }) => {
   return (
     <Accordion
       sx={{
@@ -33,7 +33,7 @@ const CustomAccordion = ({buttonName,description,icon,bordercolor,buttoncolor, c
             fontSize="large"
             sx={{ color: "#9aa1ff !important", marginRight: "20px" }}
           /> */}
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box sx={{ display: "flex", flexWrap:"wrap", alignItems: "center" }}>
             <Box
               sx={{
                 marginRight: "10px",
@@ -46,6 +46,8 @@ const CustomAccordion = ({buttonName,description,icon,bordercolor,buttoncolor, c
               {buttonName}
             </Box>
             {description}
+            <Box sx={{position:"absolute",right:0,
+          display:{xs:"none",md:"block"}}}>{balance}</Box>
           </Box>
         </Box>
       </AccordionSummary>

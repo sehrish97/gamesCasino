@@ -28,9 +28,10 @@ const BoxComponent = ({ data }) => {
             marginTop: "25px",
             marginBottom: "25px",
             display: "flex",
+            flexWrap:"wrap",
           }}
         >
-          <Box>
+          <Box sx={{display:"flex",flexDirection:"column", flexWrap:"wrap",overflow:"clip"}}>
             <Typography>{data.title}</Typography>
             <Typography
               sx={{
@@ -39,10 +40,10 @@ const BoxComponent = ({ data }) => {
                 fontSize: "0.9em",
                 opacity: 0.6,
                 lineHeight: "1.8em",
+                
               }}
             >
-              {" "}
-              {data.description1} <b>{data.blockText1}</b> {data.planeText1}
+              {data.description1} <b> {data.blockText1}</b> {data.planeText1}
               {/* Register <b>self-managed</b> account on{" "} */}
               <Link
                 to="#"
@@ -88,6 +89,9 @@ const BoxComponent = ({ data }) => {
           <Box
             sx={{
               marginLeft: "auto",
+              "@media (width:760px)": {
+                marginRight: "auto",
+              }
             }}
           >
             {index === 0 && (
@@ -100,6 +104,11 @@ const BoxComponent = ({ data }) => {
                   animationDuration: "550ms",
                   position: "absolute",
                   right: 0,
+                  "@media (max-width:600px)": { // Corrected media query syntax
+                    left: 0,
+                    right: "unset", 
+                    marginLeft:"20px"// Reset right position
+                  },
                   marginRight: "10px",
                   [`& .${circularProgressClasses.circle}`]: {
                     strokeLinecap: "round",
